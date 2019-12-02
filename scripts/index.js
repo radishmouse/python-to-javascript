@@ -117,3 +117,101 @@ for (let item of turkeyDinner) {
 }
 
 // 3. (for tomorrow) .forEach and friends
+
+
+// Converting Numbers to/from Strings
+// a_num = "5"
+// no_really_a_number = int(a_num)
+const aNum = "5";
+// const reallyANumber = Number(aNum);
+const reallyANumber = parseInt(aNum, 10);
+// Passing parseInt a decimal number
+// results in the decimal portion being
+// thrown away.
+// parseInt("3.14", 10)
+
+const reallyAFloat = parseFloat("3.14");
+
+// the_original_string = str(no_really_a_number)
+const theStringFive = String(reallyANumber);
+const theString314 = String(reallyAFloat);
+
+// Comparison
+
+// In Python, this is false:
+// "5" == 5
+
+// In JavaScript, the == operator
+// AUTOMATICALLY converts types.
+
+// In JavaScript, use the "threequal"
+"5" === 5
+// `===` is the strict equality operator
+// it does a double comparison.
+// 1. it compares the types
+// 2. then, it compares the values
+
+// These are the same in python
+// and in JavaScript
+5 < 6 // true
+6 < 6 // false
+6 <= 6 // true
+7 > 6 // true
+7 > 7 // false
+7 >= 7 // true
+
+// The following is not a thing
+// in JavaScript:
+// "7" >== 7
+// You get an error :(
+
+
+// and/or equivalents
+const petAge = 9;
+
+// python's and
+// petAge < 10 and petAge > 5
+
+// JavaScript
+petAge < 10 && petAge > 5 
+
+// python's or
+// petAge < 10 or petAge > 5
+
+// In JavaScript:
+petAge < 10 || petAge > 5
+
+// Too much!
+petAge < 10 && petAge > 5 || petAge === 8
+const isYoungEnough = petAge < 10;
+const isOldEnough = petAge > 5;
+const isJustRight = petAge === 8;
+const isMoreJustRight = petAge === 9;
+
+// if () {}
+
+// if/else
+if (isYoungEnough && isOldEnough) {
+    if (isJustRight) {
+        console.log(`You are exactly the right age.`);
+    } else if(isMoreJustRight) {
+        console.log(`Wow. That's the best`);
+    } else {
+        console.log(`You're cool anyway.`)
+    }
+}
+
+// 1. Create an array of numbers
+// 2. Loop through the array.
+// 3. Print out only the even numbers.
+
+// Python:
+// num = 8123456
+// (num % 2) == 0
+// JS:
+// const num = 8123456;
+// (num % 2) === 0
+
+
+// Maybe...
+// Dictionaries
