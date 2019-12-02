@@ -30,6 +30,36 @@ const numberOfTurkeysICanEat = 1;
 
 // print("Hello World!")
 console.log("Hello World!");
+console.log('Hello World!');
+console.log(`Hello World! ${turkeyLegsConsumed}`);
 
 // print(turkeysCooked)
 console.log(turkeysCooked);
+
+// print(f"I ate {turkeysCooked} turkeys!")
+console.log(`I ate ${turkeysCooked} turkeys!`);
+// You can use backtick-strings for interpolation.
+// - Template Strings
+// - Template Literals
+
+// print(f"How many turkeys I should eat {numberOfTurkeysICanEat - turkeysCooked}!")
+console.log(`Turkeys to eat: ${numberOfTurkeysICanEat - turkeysCooked}`);
+// Inside of `${}`, you can put any valid JavaScript expression.
+// debugger;
+let petName = `Oakley`;
+// petName.toUpperCase();
+// When do I do upper-casing in
+// HTML vs CSS vs JavaScript?
+// - Where ever you have control.
+// - If it won't change for a looong time: HTML
+// - If you can't change the HTML: CSS
+// - If you get the data from a server: JavaScript
+console.log(`${petName.toUpperCase()} is ${petName.length} characters long.`);
+// .toUpperCase is a method (i.e., a function that belongs to an object)
+// .length is property (i.e., a variable that belongs to an object)
+
+const aboutMyPet = `${petName.toUpperCase()} is ${petName.length} characters long.`;
+console.log(aboutMyPet);
+
+petName = "Millllllllla";
+console.log(aboutMyPet);
