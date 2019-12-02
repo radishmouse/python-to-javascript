@@ -63,3 +63,57 @@ console.log(aboutMyPet);
 
 petName = "Millllllllla";
 console.log(aboutMyPet);
+
+// Stuff we'll do with collections:
+// Create
+const turkeyDinner = ["sausage balls", "turkey", "dressing", "pecan pie"];
+// How do I copy a list?
+
+// Retrieve
+// print(turkeyDinner[2])
+console.log(turkeyDinner[2]);
+// How do I retrieve a portion? ("slice" in python)
+// How do I retrieve based on a condition?
+// How do I transform each item and put that into a new list?
+
+// Update
+// turkeyDinner[1] = "Tofurkey"
+turkeyDinner[1] = "Tofurkey";
+
+// Delete
+// In python:
+// turkeyDinner.pop(1) 
+// del turkeyDinner[1]
+// .........
+// You can do this in JavaScript:
+// delete turkeyDinner[1];
+// But! This leaves a hole!!!
+// Instead, you can splice
+// turkeyDinner.splice(1, 1)
+
+// In python, we do this:
+// for item in turkeyDinner:
+//   print(f"For Turkey Day, I ate {item}")
+
+// In JavaScript
+// 1. "classic" for-loop (is the equivalent of python while loop)
+// BTW, the equivalent of count += 1 is count++
+for (let count = 0; count < turkeyDinner.length; count += 1) {
+    // console.log(count);
+    console.log(`I ate ${turkeyDinner[count]}`);
+}
+// console.log(`I ate ${turkeyDinner[0]}`);
+// console.log(`I ate ${turkeyDinner[1]}`);
+// console.log(`I ate ${turkeyDinner[2]}`);
+// console.log(`I ate ${turkeyDinner[3]}`);
+
+// 2. "new fangled" for-of-loop
+let itemCount = 0; // If you *really* need the index...
+for (let item of turkeyDinner) {    
+    console.log(`I ate ${item}`);
+    turkeyDinner[itemCount] = "PIE";
+    // itemCount += 1;
+    itemCount++;
+}
+
+// 3. (for tomorrow) .forEach and friends
