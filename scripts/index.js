@@ -205,6 +205,38 @@ if (isYoungEnough && isOldEnough) {
 // 2. Loop through the array.
 // 3. Print out only the even numbers.
 
+const someNumbers = [12, 35, 87, 100, 500, 2, -4, 75849];
+// The `in` keyword would give you the indexes.
+// For other kinds of collections, the `in` keyword
+// can give you "metadata".
+for (let number of someNumbers) {
+    if (number % 2 === 0) {
+        console.log(`Here is a number: ${number}`);
+        // console.log(number);
+    }
+}
+
+// I want the even numbers in their own array.
+// - where are the numbers now?
+// - where do I want to put them?
+const evensOnly = [];
+// - How do I put them in the new array?
+
+for (let number of someNumbers) {
+    if (number % 2 === 0) {
+        // In Python, it's evensOnly.append(number)
+        evensOnly.push(number);
+    }
+}
+console.log(evensOnly);
+
+// JS doesn't care if you mix and match.
+// But, there's not a good use for a mixed up array.
+const aBunchOfStuff = ["a", 1, "hello", 300];
+for (let thing of aBunchOfStuff) {
+    console.log(thing);
+}
+
 // Python:
 // num = 8123456
 // (num % 2) == 0
