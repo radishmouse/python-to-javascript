@@ -245,5 +245,22 @@ for (let thing of aBunchOfStuff) {
 // (num % 2) === 0
 
 
-// Maybe...
-// Dictionaries
+// Maybe, probably, definitely
+// Functions
+
+// def add(num1, num2):
+//     sum = num1 + num2
+//     return sum
+
+function add(num1, num2) {
+    const sum = num1 + num2;
+    return sum;
+}
+
+add(2, 2);
+const result = add(add(2, 2), 3);
+console.log(result);
+
+for (let i = 0; i<10; i++) {
+    console.log('*');
+}
